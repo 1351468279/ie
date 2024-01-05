@@ -28,7 +28,9 @@
                 :key="items.id"
               >
                 <div class="top">
-                  <div class="icon"></div>
+                  <div class="icon">
+                    <i class="iconfont">&#xe640;</i>
+                  </div>
                   <div class="title">{{ items.name }}</div>
                 </div>
                 <div class="bottom">
@@ -51,17 +53,17 @@
       </div>
       <div class="rightmenu">
         <div class="rightmenuWrape">
-          <div class="item search">1</div>
+          <div class="item search iconfont">&#xe6e1;</div>
           <div class="item system">
             <div class="sysbtn">
-              <div class="icon">1</div>
-              <div class="text">2</div>
+              <div class="icon iconfont">&#xe603;</div>
+              <div class="text">政务</div>
               <div class="endtag"></div>
             </div>
           </div>
-          <div class="item">3</div>
-          <div class="item">4</div>
-          <div class="item">5</div>
+          <div class="item line"></div>
+          <div class="item register">注册</div>
+          <div class="item login">登录</div>
         </div>
       </div>
     </div>
@@ -123,6 +125,53 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+@font-face {
+  font-family: 'iconfont'; /* Project id 4400915 */
+  /* Color fonts */
+  src: url('//at.alicdn.com/t/c/font_4400915_p10nhq6bjz.woff2?t=1704450222576')
+      format('woff2'),
+    url('//at.alicdn.com/t/c/font_4400915_p10nhq6bjz.woff?t=1704450222576')
+      format('woff'),
+    url('//at.alicdn.com/t/c/font_4400915_p10nhq6bjz.ttf?t=1704450222576')
+      format('truetype');
+}
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-louceng:before {
+  content: '\e640';
+}
+
+.icon-wangluo:before {
+  content: '\e642';
+}
+
+.icon-dalou:before {
+  content: '\e6bc';
+}
+
+.icon-fuwu:before {
+  content: '\e611';
+}
+
+.icon-jingwuicon_svg-:before {
+  content: '\e603';
+}
+
+.icon-search:before {
+  content: '\e6e1';
+}
+
+.icon-zhiliang-:before {
+  content: '\e668';
+}
+
 .category_bar {
   width: 100%;
   height: 5vh;
@@ -248,7 +297,10 @@ export default {
                 .icon {
                   width: 3vw;
                   height: 3vw;
-                  background-color: #007aff;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-size: 2vw;
                 }
                 .title {
                   flex: 1;
@@ -288,9 +340,9 @@ export default {
         justify-content: space-between;
         align-items: center;
         .item {
+          cursor: pointer;
           width: 2.5vw;
           height: 5vh;
-          background-color: yellow;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -299,7 +351,6 @@ export default {
           background-color: #f7f8fa;
         }
         .system {
-          background-color: #ffff;
           width: 4.5vw;
           .sysbtn {
             width: 4.5vw;
@@ -307,13 +358,48 @@ export default {
             border: 1px solid #e40613;
             border-radius: 2px;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
+            color: #e40613;
             .icon {
               width: 0.7vw;
               height: 0.7vw;
-              background-color: #e40613;
             }
+            .text {
+              font-size: 0.75vw;
+            }
+            .endtag {
+              width: 0.3vw;
+              height: 0.3vw;
+              border-right: 1px solid #e40613;
+              border-bottom: 1px solid #e40613;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        .line {
+          width: 1px;
+          height: 1vw;
+          background-color: #ececec;
+        }
+        .register {
+          font-size: 0.8vw;
+          &:hover {
+            color: #007aff;
+          }
+        }
+        .login {
+          font-size: 0.7vw;
+          width: 3vw;
+          border-radius: 2px;
+          height: 2.8vh;
+          background-color: #007aff;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            background-color: #3395ff;
           }
         }
       }

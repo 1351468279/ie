@@ -19,3 +19,4 @@ export default {
   computed: {},
 }
 </script>
+<style lang="" scoped></style>
