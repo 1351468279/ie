@@ -1,15 +1,11 @@
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <div class="cmspage_page">cmspage_page</div>
 </template>
 
-<style></style>
 <script>
-import NavBar from '@/components/NavBar'
 export default {
-  name: 'App',
-  components: { NavBar },
+  name: '',
+  components: {},
   data() {
     return {}
   },
@@ -19,3 +15,4 @@ export default {
   computed: {},
 }
 </script>
+<style scoped lang="scss"></style>

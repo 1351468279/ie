@@ -1,14 +1,13 @@
 <template>
-  <div id="app">
-    <router-view />
+  <div class="index_page">
+    <NavBar></NavBar>
   </div>
 </template>
 
-<style></style>
 <script>
-import NavBar from '@/components/NavBar'
+import NavBar from '@/components/NavBar.vue'
 export default {
-  name: 'App',
+  name: '',
   components: { NavBar },
   data() {
     return {}
@@ -19,3 +18,4 @@ export default {
   computed: {},
 }
 </script>
+<style scoped lang="scss"></style>
