@@ -53,7 +53,16 @@
       </div>
       <div class="rightmenu">
         <div class="rightmenuWrape">
-          <div class="item search iconfont">&#xe6e1;</div>
+          <div
+            class="item search iconfont"
+            style="font-size: 26px"
+            @click="showSearch"
+          >
+            &#xe6e1;
+            <div class="searchBar" v-if="showmask"></div>
+          </div>
+
+          <div class="mask" v-if="showmask" @click.stop="closeSeacch"></div>
           <div class="item system">
             <div class="sysbtn">
               <div class="icon iconfont">&#xe603;</div>
@@ -339,6 +348,17 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .mask {
+          width: 100vw;
+          height: 100vh;
+          background-color: rgba(73, 87, 112, 0.2);
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 2000;
+        }
         .item {
           cursor: pointer;
           width: 2.5vw;
@@ -349,7 +369,18 @@ export default {
         }
         .search {
           background-color: #f7f8fa;
+          position: relative;
+          .searchBar {
+            position: absolute;
+            width: 22vw;
+            height: 22vh;
+            background-color: skyblue;
+            right: 0;
+            top: 0;
+            z-index: 99999999;
+          }
         }
+
         .system {
           width: 4.5vw;
           .sysbtn {
