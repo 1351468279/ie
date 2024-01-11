@@ -130,7 +130,6 @@ export default {
       this.$router.push(item.route)
     },
   },
-  computed: {},
 }
 </script>
 <style scoped lang="scss">

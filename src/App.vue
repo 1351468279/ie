@@ -16,7 +16,6 @@ export default {
   created() {},
   mounted() {},
   methods: {},
-  computed: {},
 }
 </script>
 <style lang="" scoped></style>

@@ -12,7 +12,6 @@ export default {
   created() {},
   mounted() {},
   methods: {},
-  computed: {},
 }
 </script>
 <style scoped lang="scss"></style>

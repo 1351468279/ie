@@ -33,9 +33,9 @@ const routes = [
     path: '/casecenter',
     name: 'casecenter',
     component: () => import('@/views/casecenter/index.vue')
-  },
+  }
 ]
-
+// () => import('@/views/casecenter/index.vue')
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,

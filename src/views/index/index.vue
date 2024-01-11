@@ -1,24 +1,27 @@
 <template>
   <div class="index_page">
     <NavBar></NavBar>
-    <div class="banner"><div class="item"></div></div>
+    <div class="banner">
+      <div class="item"></div>
+    </div>
     <CategoryFilter />
+    <ApplyFoot />
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
 import CategoryFilter from '@/views/index/components/CategoryFilter'
+import ApplyFoot from '@/views/index/components/ApplyFoot'
 export default {
   name: '',
-  components: { NavBar, CategoryFilter },
+  components: { NavBar, CategoryFilter, ApplyFoot },
   data() {
     return {}
   },
   created() {},
   mounted() {},
   methods: {},
-  computed: {},
 }
 </script>
 <style scoped lang="scss">
