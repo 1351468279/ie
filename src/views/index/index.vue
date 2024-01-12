@@ -4,18 +4,18 @@
     <div class="banner">
       <div class="item"></div>
     </div>
-    <CategoryFilter />
-    <ApplyFoot />
+
+    <NavFootor />
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
-import CategoryFilter from '@/views/index/components/CategoryFilter'
-import ApplyFoot from '@/views/index/components/ApplyFoot'
+import NavFootor from '@/components/NavFootor.vue'
+
 export default {
   name: '',
-  components: { NavBar, CategoryFilter, ApplyFoot },
+  components: { NavBar, NavFootor },
   data() {
     return {}
   },

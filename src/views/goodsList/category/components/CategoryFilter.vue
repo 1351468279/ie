@@ -122,7 +122,12 @@
         </div>
       </div>
       <div class="goodsList">
-        <div class="goodsItem" v-for="item in goodsList" :key="item.goodsId">
+        <div
+          class="goodsItem"
+          v-for="item in goodsList"
+          :key="item.goodsId"
+          @click="viewProjectDetail(item.goodsId)"
+        >
           <div class="wrape">
             <div class="left">
               <div class="top">
@@ -605,7 +610,6 @@
 
 <script>
 import { tagList, cateTagList, totalGoodsList } from '@/utils/data'
-import { getTagList, getWebSiteInfo } from '@/service/apply'
 export default {
   name: '',
   components: {},
@@ -622,7 +626,6 @@ export default {
         experiences: null,
         categoryId: '',
       },
-
       input: '',
       tagList: [],
       cateTagList: cateTagList,
@@ -694,10 +697,9 @@ export default {
       ],
     }
   },
-  async created() {
-    await getWebSiteInfo()
-    this.tagList = await getTagList(4)
-    this.tagList = this.tagList.filter((item, index) => index == 0)
+  created() {
+    this.tagList = tagList.filter((item, index) => index == 0)
+    console.log(this.tagList)
     this.goodsList = totalGoodsList.data
   },
   mounted() {
@@ -710,6 +712,9 @@ export default {
   methods: {
     ceshi() {
       console.log('测试')
+    },
+    viewProjectDetail(id) {
+      this.$router.push({ path: `/projectDetail/${id}` })
     },
     showAll() {
       if (this.showall) {

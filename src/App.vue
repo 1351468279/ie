@@ -19,3 +19,4 @@ export default {
 }
 </script>
 <style lang="" scoped></style>
+<style src="@/static/iconfont/iconfont.css"></style>
